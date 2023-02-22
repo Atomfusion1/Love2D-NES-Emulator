@@ -6,7 +6,9 @@ if os.getenv("LOCAL_LUA_DEBUGGER_VSCODE") == "1" then
 filestring            = love.filesystem.getSourceBaseDirectory() .. "/" .. love.filesystem.getIdentity() .. "/"
 -- Order Matters .. Cart First for setup  
 local cart          = require("NES.Cartridge.Cartridge")
-cart.Initialize(filestring .. "Roms\\contra.nes")
+-- CHANGE CARTRIDGE HERE **********************
+    cart.Initialize(filestring .. "Roms\\smb.nes")
+-- ******************************************
 local mapper        = require("NES.Cartridge.Mappers")
 local keyboard      = require("Includes.keyboard")
 local cpu           = require("NES.CPU.cpumain")
@@ -37,7 +39,6 @@ y = 0
 function love.load()
     love.graphics.setDefaultFilter("nearest", "nearest")
     -- Global Cartridge
-    cart.Initialize(filestring .. "Roms/smb.nes")
     mapper[cart.mapper].mapper.INI()
     cpu.Initialize()
 end
