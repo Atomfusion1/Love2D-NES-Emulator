@@ -1,0 +1,15 @@
+{
+    "Lua.diagnostics.globals": [
+        "love",
+        "bit"
+    ],
+    "lövelauncher.path": "F:\\PCLOUD\\Coding\\Love2D\\Love2D\\Love11.4\\love.exe",
+    "lövelauncher.saveAllOnLaunch": true,
+    "lövelauncher.useConsoleSubsystem": true,
+    "Lua.runtime.version": "Lua 5.4",
+    "Lua.workspace.library": [
+        "${3rd}/love2d/library"
+    ],
+    "Lua.workspace.checkThirdParty": false,
+    "terminal.integrated.confirmOnKill": "never"
+}
