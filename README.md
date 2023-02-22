@@ -16,3 +16,4 @@
  I have started this project just for fun and do not know how much I will continue but its been a ride 
  Lots of Bugs/ bad behaviours 
  
+ ![Screenshot](Emulator.png)
