@@ -1,5 +1,6 @@
 # Love2d NES Emulator
- Trial Emulator for Love2d and Lua
+ Trial Emulator for Love2d 11.4 and Luajit
+ Editing done in VSCode
  
  Initial Setup 
  CPU Normal Op Codes 
@@ -13,5 +14,5 @@
  mapper 0, 2, 3 may work or close to working 
  
  I have started this project just for fun and do not know how much I will continue but its been a ride 
- 
+ Lots of Bugs/ bad behaviours 
  
