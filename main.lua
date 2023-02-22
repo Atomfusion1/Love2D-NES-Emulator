@@ -37,7 +37,7 @@ y = 0
 function love.load()
     love.graphics.setDefaultFilter("nearest", "nearest")
     -- Global Cartridge
-    cart.Initialize(filestring .. "Roms\\contra.nes")
+    cart.Initialize(filestring .. "Roms\\smb.nes")
     mapper[cart.mapper].mapper.INI()
     cpu.Initialize()
 end
@@ -55,7 +55,7 @@ function love.update(dt)
         --nesTestromLog.PrintOutput(0)
         step = 0
     end
-    --ppu.StartCharacterTiles()
+    ppu.StartCharacterTiles()
     ppu.StartGameWindow()
     time = .95 * time + .05 * (love.timer.getTime() - storage)
     apu.TimerCheck(dt)
@@ -75,8 +75,8 @@ function love.draw()
         string.format("(%.3f)", msTime) .. " Comm Frame:" .. string.format("(%.0fk)", (16600 / msTime * execute_f_c_e / 1000)),
         500, 770)
     love.graphics.print("6502 Emulator FPS: " .. string.format("(%.2f)", 1 / love.timer.getDelta()), 300, 770)
-    --love.graphics.print("Garbage: " .. string.format("(%.2f)", collectgarbage("count")), 30, 770)
-    --ppu.DrawCharacterTiles()
+    love.graphics.print("Garbage: " .. string.format("(%.2f)", collectgarbage("count")), 30, 770)
+    ppu.DrawCharacterTiles()
     ppu.GameWindow()
     --ppu.ScreenToNumbers()-- HACK 
     -- 60 fps limit 
